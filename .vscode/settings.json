@@ -1,11 +1,14 @@
 {
+  "prettier.requireConfig": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "prettier.requireConfig": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

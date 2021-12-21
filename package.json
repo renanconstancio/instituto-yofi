@@ -12,8 +12,10 @@
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.4",
     "sass": "^1.45.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
@@ -25,13 +27,13 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,md,json}' --config ./.prettierrc"
   },
   "browserslist": {
     "production": [
@@ -46,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.3",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

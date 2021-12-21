@@ -1,4 +1,3 @@
-
 import './style/_custom.scss';
 
 import ReactDOM from 'react-dom';
