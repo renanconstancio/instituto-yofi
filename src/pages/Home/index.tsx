@@ -20,7 +20,13 @@ const Home = () => {
     <>
       <Topo />
       <div className="banner">
-        <OwlCarousel className="owl-theme" items={1} loop margin={0} nav={false} dots={false}>
+        <OwlCarousel
+          className="owl-theme"
+          items={1}
+          loop={true}
+          margin={0}
+          nav={false}
+          dots={false}>
           <div className="item">
             <img src="banners/banner-01.jpg" loading="lazy" />
           </div>
