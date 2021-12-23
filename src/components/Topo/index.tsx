@@ -32,7 +32,8 @@ const Topo = () => {
         className={`${
           scrollPosition === 0 && 'd-none'
         } fas fa-chevron-circle-up scrolling-top fa-2x text-primary`}
-        onClick={() => scroll.scrollToTop()}></i>
+        onClick={() => scroll.scrollToTop()}
+        style={{ zIndex: 9999 }}></i>
       <header
         className={`p-3 px-0 ${addAbsolue === '' ? 'fixed-top' : 'bg-white'} ${
           scrollPosition > 0 && addAbsolue === '' && 'set-scrol'
