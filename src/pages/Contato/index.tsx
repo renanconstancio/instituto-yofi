@@ -1,57 +1,117 @@
+/* eslint-disable no-undef */
 import './style.scss';
 import { useRef, useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import axios from 'axios';
+
+const initialFormData = {
+  nome: '',
+  email: '',
+  assunto: '',
+  mensagem: ''
+};
 
 const Contato = () => {
-  const initialFormData = Object.freeze({
-    nome: null,
-    email: null,
-    assunto: null,
-    mensagem: null
+  const [btnTest, setBtnTest] = useState({
+    btnclass: '',
+    btndisable: false
   });
+
+  const [message, setMessage] = useState('');
 
   const [formData, updateFormData] = useState(initialFormData);
 
-  const handleChange = (e: any) => {
-    updateFormData({
-      ...formData,
-      // Trimming any whitespace
-      [e.target.name]: e.target.value.trim() || null
-    });
-  };
   const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
 
     document.getElementsByName('nome')[0].classList.remove('is-invalid');
     document.getElementsByName('email')[0].classList.remove('is-invalid');
     document.getElementsByName('assunto')[0].classList.remove('is-invalid');
     document.getElementsByName('mensagem')[0].classList.remove('is-invalid');
 
-    if (formData.nome === null) {
+    if (formData.nome === '') {
       document.getElementsByName('nome')[0].classList.add('is-invalid');
       return;
     }
 
-    if (formData.email === null) {
+    if (formData.email === '') {
       document.getElementsByName('email')[0].classList.add('is-invalid');
       return;
     }
 
-    if (formData.assunto === null) {
+    if (formData.assunto === '') {
       document.getElementsByName('assunto')[0].classList.add('is-invalid');
       return;
     }
 
-    if (formData.mensagem === null) {
+    if (formData.mensagem === '') {
       document.getElementsByName('mensagem')[0].classList.add('is-invalid');
       return;
     }
 
-    // ... submit to API or something
-    console.log(form.current);
+    setBtnTest({
+      btnclass: 'disabled',
+      btndisable: true
+    });
+    setMessage('');
+
+    await axios
+      .post(
+        `${process.env.REACT_APP_HOST}`,
+        {
+          nome: formData.nome.trim(),
+          email: formData.email.trim(),
+          assunto: formData.assunto.trim(),
+          mensagem: formData.mensagem.trim(),
+          send_name: `${process.env.REACT_APP_FROM}`,
+          send_mail: `${process.env.REACT_APP_NAME}`
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      )
+      .then(function (response) {
+        console.log('response.data', response.data);
+        const {
+          data: { message }
+        } = response;
+
+        setMessage(message);
+
+        setBtnTest({
+          btnclass: '',
+          btndisable: false
+        });
+
+        updateFormData({ ...initialFormData });
+      })
+      .catch(function (error) {
+        const {
+          response: {
+            data: { message }
+          }
+        } = error;
+        setMessage(message);
+
+        console.log('error.response', error.response);
+      });
+
+    setTimeout(() => {
+      setMessage('');
+    }, 3300);
   };
+
+  const handleChange = (e: any) => {
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
       <form className="container-fluid info info-contato" id="contato" ref={form}>
@@ -63,6 +123,8 @@ const Contato = () => {
             <h1 className="text-center mb-5 fst-italic text-uppercase text-primary border-bottom">
               Entre em Contato conosco!
             </h1>
+
+            {message && <div className="alert alert-info">{message}</div>}
 
             <div className="row">
               <div className="col-md-7">
@@ -78,6 +140,7 @@ const Contato = () => {
                       className={`form-control`}
                       id="InputNome"
                       aria-describedby="nomeHelp validationNomeFeedback"
+                      value={formData.nome}
                       onChange={handleChange}
                     />
                     <div id="validationNomeFeedback" className="invalid-feedback">
@@ -93,6 +156,7 @@ const Contato = () => {
                       type="email"
                       className="form-control"
                       id="InputEmail"
+                      value={formData.email}
                       onChange={handleChange}
                       aria-describedby="emailHelp validationEmailFeedback"
                     />
@@ -109,6 +173,7 @@ const Contato = () => {
                       type="assunto"
                       className="form-control"
                       id="InputAssunto"
+                      value={formData.assunto}
                       onChange={handleChange}
                       aria-describedby="assuntoHelp validationAssuntoFeedback"
                     />
@@ -125,13 +190,17 @@ const Contato = () => {
                       id="mensagem"
                       className="form-control"
                       onChange={handleChange}
+                      value={formData.mensagem}
                       aria-describedby="mensagemHelp validationMensagemFeedback"></textarea>
                     <div id="validationMensagemFeedback" className="invalid-feedback">
                       Campo obrigatório
                     </div>
                   </div>
                   <div className="mb-3 col-12">
-                    <button onClick={handleSubmit} className="btn btn-primary">
+                    <button
+                      onClick={handleSubmit}
+                      className={`text-uppercase btn btn-primary ${btnTest.btnclass}`}
+                      disabled={btnTest.btndisable}>
                       enviar contato
                     </button>
                   </div>

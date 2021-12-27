@@ -11,6 +11,7 @@ const Topo = () => {
   const addAbsolue = pathname.split('/')[1];
 
   const [scrollPosition, setScrollPosition] = useState(0);
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -69,10 +70,16 @@ const Topo = () => {
                         </LScrol>
                       </span>
                       <span className="flex-fill flip">
-                        <a href="">
+                        <LScrol
+                          activeClass="active"
+                          to="servicos"
+                          spy={true}
+                          smooth={true}
+                          offset={0}
+                          duration={500}>
                           <span>serviços</span>
                           <span>serviços</span>
-                        </a>
+                        </LScrol>
                       </span>
                       <span className="flex-fill flip">
                         <a href="">
