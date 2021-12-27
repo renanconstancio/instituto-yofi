@@ -21,7 +21,7 @@ header {
     > span {
       position: relative;
       display: block;
-      height: 48px;
+      height: 65px;
       > a {
         font-weight: 400;
         text-transform: uppercase;
@@ -51,8 +51,8 @@ header {
         span {
           margin: 0;
           width: 100%;
-          height: 48px;
-          line-height: 48px;
+          height: 65px;
+          line-height: 65px;
           position: absolute;
           text-align: center;
 
@@ -139,7 +139,19 @@ header {
   }
 
   &.set-scrol {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(220, 239, 222, 0.6);
+
+    nav {
+      > span {
+        height: 48px;
+        > a {
+          span {
+            height: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
     img {
       width: 75px;
     }

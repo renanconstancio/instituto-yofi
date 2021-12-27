@@ -30,9 +30,7 @@ const Home = () => {
           <div className="row justify-content-end align-items-center">
             <div className="col col-md-7 align-self-center">
               <ScrollAnimation animateIn="fadeInDownBig" animateOut="fadeInDown">
-                <Link className="button" to="/quem-somos" onClick={scrollToTop}>
-                  quem somos
-                </Link>
+                <h1 className="button">quem somos</h1>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUpBig" animateOut="fadeInDown">
                 <div>
@@ -44,6 +42,9 @@ const Home = () => {
                   são formados em Odontologia e com suas especializações pela UNESP e possuem
                   diversos outros cursos de atualização, inclusive fora do país, como o exemplo de
                   seu curso na Carolina do Norte - EUA.
+                  <Link to="/quem-somos" className="d-block float-end" onClick={scrollToTop}>
+                    Saiba mais
+                  </Link>
                 </div>
               </ScrollAnimation>
             </div>
