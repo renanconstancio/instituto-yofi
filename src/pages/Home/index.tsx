@@ -10,6 +10,7 @@ import Rodape from '../../components/Rodape';
 import Banner from '../../components/Banner';
 import Contato from '../Contato';
 import Contador from '../../components/Contador';
+import MapPage from '../../components/MapPage';
 
 // import CountUp from 'react-countup';
 // import VisibilitySensor from 'react-visibility-sensor';
@@ -108,6 +109,10 @@ const Home = () => {
       </ScrollAnimation>
 
       <Contato />
+
+      <div className="info">
+        <MapPage />
+      </div>
 
       <Rodape />
     </>

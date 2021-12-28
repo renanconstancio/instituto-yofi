@@ -6,7 +6,10 @@ $secondary: #93c48d;
 $body-bg: $primary;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
 @import '~bootstrap/scss/bootstrap.scss';

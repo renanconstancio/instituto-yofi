@@ -216,9 +216,9 @@ const Contato = () => {
                   </div>
                   <div className="col-12 mb-3 h2 border-bottom pb-3">Redes Sociais</div>
                   <div className="col-12 mb-3 pb-3">
-                    <i className="fab fa-facebook-square"></i>
+                    <i className="fab fa-facebook fa-3x"></i>
                     <br />
-                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-instagram fa-3x"></i>
                     <br />
                   </div>
                 </div>
