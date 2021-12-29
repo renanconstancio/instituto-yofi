@@ -1,9 +1,9 @@
 import './style.scss';
 
 import { Link } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
 import ScrollAnimation from 'react-animate-on-scroll';
+import scrollToElement from 'scroll-to-element';
 
 import Topo from '../../components/Topo';
 import Rodape from '../../components/Rodape';
@@ -13,10 +13,6 @@ import Contador from '../../components/Contador';
 import MapPage from '../../components/MapPage';
 
 const Home = () => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <>
       <Topo />
@@ -40,7 +36,15 @@ const Home = () => {
                   são formados em Odontologia e com suas especializações pela UNESP e possuem
                   diversos outros cursos de atualização, inclusive fora do país, como o exemplo de
                   seu curso na Carolina do Norte - EUA.
-                  <Link to="/quem-somos" className="d-block float-end" onClick={scrollToTop}>
+                  <Link
+                    to="/quem-somos"
+                    className="d-block float-end"
+                    onClick={() =>
+                      scrollToElement('#root', {
+                        offset: 0,
+                        duration: 1500
+                      })
+                    }>
                     Saiba mais
                   </Link>
                 </div>
@@ -56,7 +60,7 @@ const Home = () => {
             <div className="row align-items-center align-self-center text-center text-white">
               <div className="col">
                 <i className="fas fa-users fa-3x pb-1 d-block"></i>
-                <Contador start={500} end={1320} duration={2.2} delay={0.3} />
+                <Contador start={500} end={920} duration={2.2} delay={0.3} />
                 Clientes
               </div>
               <div className="col">

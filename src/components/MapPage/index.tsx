@@ -12,7 +12,7 @@ import {
   DirectionsRenderer
 } from '@react-google-maps/api';
 
-export const REACT_APP_GOOGLE_API_KEY = 'AIzaSyDoaE6y_kmDvcFNw2B9T-vezzmvLm3fE9Y';
+const REACT_APP_GOOGLE_API_KEY = 'AIzaSyDoaE6y_kmDvcFNw2B9T-vezzmvLm3fE9Y';
 
 export interface MapPageProps {}
 

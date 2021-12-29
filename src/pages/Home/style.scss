@@ -12,7 +12,7 @@
     border-color: #446a49;
     border-width: 3px;
     border-style: solid;
-    width: 385px;
+    width: auto;
     height: auto;
     font-size: 2rem;
     text-transform: uppercase;
@@ -26,6 +26,9 @@
     font-style: italic;
     font-weight: 700;
     text-decoration: none;
+    @media (max-width: 600px) {
+      font-size: 100%;
+    }
   }
 }
 
@@ -39,6 +42,9 @@
   div {
     font-style: italic;
     font-size: 1.3rem;
+    @media (max-width: 600px) {
+      font-size: 100%;
+    }
   }
 }
 
@@ -80,5 +86,8 @@
   div {
     font-style: italic;
     font-size: 1.3rem;
+    @media (max-width: 600px) {
+      font-size: 100%;
+    }
   }
 }

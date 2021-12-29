@@ -8,7 +8,7 @@ const QuemSomos = () => {
       <div className="bg-white border-top pt-5 pb-5">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col col-5">
+            <div className="col-12 col-sm-8">
               <h1 className="fst-italic text-center mb-5">Quem Somos</h1>
 
               <p>
