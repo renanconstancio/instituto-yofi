@@ -82,10 +82,10 @@ const Topo = () => {
                         </LScrol>
                       </span>
                       <span className="flex-fill flip">
-                        <a href="">
+                        <Link to="/nossa-equipe">
                           <span>equipe</span>
                           <span>equipe</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="flex-fill flip">
                         <LScrol
@@ -122,10 +122,10 @@ const Topo = () => {
                         </a>
                       </span>
                       <span className="flex-fill flip">
-                        <a href="">
+                        <Link to="/nossa-equipe">
                           <span>equipe</span>
                           <span>equipe</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="flex-fill flip">
                         <Link to="/">

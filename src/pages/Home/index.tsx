@@ -12,9 +12,6 @@ import Contato from '../Contato';
 import Contador from '../../components/Contador';
 import MapPage from '../../components/MapPage';
 
-// import CountUp from 'react-countup';
-// import VisibilitySensor from 'react-visibility-sensor';
-
 const Home = () => {
   const scrollToTop = () => {
     scroll.scrollToTop();
