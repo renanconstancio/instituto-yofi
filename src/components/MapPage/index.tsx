@@ -16,9 +16,19 @@ const REACT_APP_GOOGLE_API_KEY = 'AIzaSyDoaE6y_kmDvcFNw2B9T-vezzmvLm3fE9Y';
 
 export interface MapPageProps {}
 
-const position = {
-  lat: -21.5953459,
-  lng: -48.8084183
+const positions = {
+  center: {
+    lat: -21.6757555,
+    lng: -48.8127057
+  },
+  itapolis: {
+    lat: -21.5953459,
+    lng: -48.8084183
+  },
+  ibitinga: {
+    lat: -21.757661,
+    lng: -48.8297996
+  }
 };
 
 const MapPage = () => {
@@ -28,7 +38,7 @@ const MapPage = () => {
   const [pointA, setPointA] = React.useState<google.maps.LatLngLiteral>();
   const [pointB, setPointB] = React.useState<google.maps.LatLngLiteral>();
 
-  const [origin, setOrigin] = React.useState<google.maps.LatLngLiteral | null>(position);
+  const [origin, setOrigin] = React.useState<google.maps.LatLngLiteral | null>(positions.center);
   const [destination, setDestination] = React.useState<google.maps.LatLngLiteral | null>(null);
 
   const [response, setResponse] = React.useState<google.maps.DistanceMatrixResponse | null>(null);
@@ -112,8 +122,8 @@ const MapPage = () => {
         <GoogleMap
           onLoad={onMapLoad}
           mapContainerStyle={{ width: '100%', height: '100%' }}
-          center={position}
-          zoom={15}>
+          center={positions.center}
+          zoom={12}>
           <div className="address">
             <StandaloneSearchBox onLoad={onLoadA} onPlacesChanged={onPlacesChangedA}>
               <input className="addressField" placeholder="Digite o endereço inicial" />
@@ -127,17 +137,30 @@ const MapPage = () => {
           </div>
 
           {!pointA && !pointB && (
-            <Marker
-              position={position}
-              options={{
-                title: 'Instituto Yofi - Itápolis',
-                label: {
-                  fontSize: '1.5em',
-                  text: 'Instituto Yofi - Itápolis',
-                  className: 'map-marker'
-                }
-              }}
-            />
+            <>
+              <Marker
+                position={positions.itapolis}
+                options={{
+                  title: 'Instituto Yofi - Itápolis',
+                  label: {
+                    fontSize: '1.5em',
+                    text: 'Instituto Yofi - Itápolis',
+                    className: 'map-marker'
+                  }
+                }}
+              />
+              <Marker
+                position={positions.ibitinga}
+                options={{
+                  title: 'Instituto Yofi - Ibitinga',
+                  label: {
+                    fontSize: '1.5em',
+                    text: 'Instituto Yofi - Ibitinga',
+                    className: 'map-marker'
+                  }
+                }}
+              />
+            </>
           )}
 
           {!response && pointA && <Marker position={pointA} />}

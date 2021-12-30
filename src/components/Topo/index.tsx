@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import scrollToElement from 'scroll-to-element';
 
+import LogoYofi from './logo-svg.svg';
+
 const Topo = () => {
   const { pathname } = useLocation();
 
@@ -58,8 +60,8 @@ const Topo = () => {
               <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                 <li>
                   <HashLink
-                    className="dropdown-item"
                     type="button"
+                    className="dropdown-item"
                     to="#quem_somos"
                     onClick={() =>
                       scrollToElement('#quem_somos', {
@@ -71,13 +73,44 @@ const Topo = () => {
                   </HashLink>
                 </li>
                 <li>
-                  <HashLink className="dropdown-item" type="button" to="servicos" smooth={true}>
+                  <HashLink
+                    type="button"
+                    className="dropdown-item"
+                    to="#/nossas_unidades"
+                    onClick={() =>
+                      scrollToElement('#nossas_unidades', {
+                        offset: 0,
+                        duration: 1500
+                      })
+                    }>
+                    Unidades
+                  </HashLink>
+                </li>
+                <li>
+                  <HashLink
+                    className="dropdown-item"
+                    type="button"
+                    to="/#servicos"
+                    onClick={() =>
+                      scrollToElement('#servicos', {
+                        offset: 0,
+                        duration: 1500
+                      })
+                    }>
                     Serviços
                   </HashLink>
                 </li>
                 <li>
-                  <Link to="/nossa-equipe" className="dropdown-item">
-                    <span>Nossa Equipe</span>
+                  <Link
+                    to="/nossa-equipe"
+                    className="dropdown-item"
+                    onClick={() =>
+                      scrollToElement('#root', {
+                        offset: 0,
+                        duration: 1500
+                      })
+                    }>
+                    Nossa Equipe
                   </Link>
                 </li>
                 <li>
@@ -111,9 +144,9 @@ const Topo = () => {
         </div>
         <div className="container d-none d-sm-block p-3 px-0">
           <div className="row align-items-center justify-content-between">
-            <div className="col col-md-2">
+            <div className="col col-md-3">
               <Link to="/">
-                <img src="logo.png" loading="lazy" alt="" className="img-fluid" />
+                <img src={LogoYofi} alt="Instituto Yofi" className="img-fluid" />
               </Link>
             </div>
             <div className="col col-md-7">
@@ -159,7 +192,14 @@ const Topo = () => {
                     </HashLink>
                   </span>
                   <span className="flex-fill flip">
-                    <Link to="/nossa-equipe">
+                    <Link
+                      to="/nossa-equipe"
+                      onClick={() =>
+                        scrollToElement('#root', {
+                          offset: 0,
+                          duration: 1500
+                        })
+                      }>
                       <span>equipe</span>
                       <span>equipe</span>
                     </Link>

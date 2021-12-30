@@ -127,7 +127,7 @@ const Contato = () => {
             {message && <div className="alert alert-info">{message}</div>}
 
             <div className="row">
-              <div className="col-md-7">
+              <div className="col-md-5">
                 <div className="row">
                   <div className="col-12 mb-3 h2 border-bottom pb-3">Formulário de Contato</div>
                   <div className="col-12 mb-3">
@@ -147,7 +147,7 @@ const Contato = () => {
                       Campo obrigatório
                     </div>
                   </div>
-                  <div className="col-5 mb-3">
+                  <div className="col-10 mb-3">
                     <label htmlFor="InputEmail" className="form-label">
                       E-mail
                     </label>
@@ -206,22 +206,92 @@ const Contato = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-5">
-                <div className="row">
-                  <div className="col-12 mb-3 h2 border-bottom pb-3">Informações de Contato</div>
-                  <div className="col-12 mb-3 pb-3">
-                    <p>AVENIDA FRANCISCO PORTO, 1146 - CENTRO | ITÁPOLIS/SP</p>
-                    <strong className="d-block">(16) 3262-1840 Itápolis</strong>
-                    <strong className="d-block">(16) 3342-2810 Ibitinga</strong>
+              <div className="col-md-7">
+                <h2 className="mb-3 border-bottom pb-3">Informações de Contato</h2>
+                <div className="d-flex align-items-center">
+                  <div className="flex-grow-1 me-3">
+                    <strong className="d-block h3 border-bottom pb-2">
+                      Instituto Yofi - Itápolis
+                    </strong>
+                    <strong className="d-block">
+                      <i className="fas fa-phone-alt m-2"></i>
+                      (16) 3262-1840
+                    </strong>
+                    <p className="text-uppercase">
+                      AV. FRANCISCO PORTO, 1146 - CENTRO, ITÁPOLIS - SP, 14900-000
+                    </p>
                   </div>
-                  <div className="col-12 mb-3 h2 border-bottom pb-3">Redes Sociais</div>
-                  <div className="col-12 mb-3 pb-3">
-                    <i className="fab fa-facebook fa-3x"></i>
-                    <br />
-                    <i className="fab fa-instagram fa-3x"></i>
-                    <br />
+                  <div className="flex-shrink-0">
+                    <img
+                      src="yofi-itapolis.jpg"
+                      alt="Instituto Yofi Itápolis"
+                      className="img-fluid"
+                      style={{
+                        width: '255px'
+                      }}
+                    />
                   </div>
                 </div>
+                <div className="border-bottom m-3 mx-0" />
+                <div className="d-flex align-items-center">
+                  <div className="flex-shrink-0">
+                    <img
+                      src="yofi-ibitinga.jpg"
+                      alt="Instituto Yofi Itápolis"
+                      className="img-fluid"
+                      style={{
+                        width: '255px'
+                      }}
+                    />
+                  </div>
+                  <div className="flex-grow-1 ms-3">
+                    <strong className="d-block h3 border-bottom pb-2">
+                      Instituto Yofi - Ibitinga
+                    </strong>
+                    <strong className="d-block">
+                      <i className="fas fa-phone-alt me-2"></i>
+                      (16) 3342-2810
+                    </strong>
+                    <p className="text-uppercase">
+                      Av. Sete de Setembro, 760 - Centro, Ibitinga - SP, 14940-000
+                    </p>
+                  </div>
+                </div>
+
+                {/* <div className="row">
+                  <div className="col-12 mb-3 h2 border-bottom pb-3">Informações de Contato</div>
+                  <div className="col-12 mb-3 pb-3">
+                    <strong className="d-block">(16) 3262-1840 Itápolis</strong>
+                    <p className="text-uppercase">
+                      AV. FRANCISCO PORTO, 1146 - CENTRO, ITÁPOLIS - SP, 14900-000
+                    </p>
+                    <strong className="d-block">(16) 3342-2810 Ibitinga</strong>
+                    <p className="text-uppercase">
+                      Av. Sete de Setembro, 760 - Centro, Ibitinga - SP, 14940-000
+                    </p>
+                  </div>
+                  <div className="col-12 mb-3 h2 border-bottom pb-3">Redes Sociais</div>
+                  <div className="col-12 mb-3 pb-3 d-flex flex-column">
+                    <a
+                      href="https://www.facebook.com/institutoyofi"
+                      target="_blank"
+                      className="d-flex align-items-center text-uppercase mb-2 text-decoration-none"
+                      rel="noopener noreferrer">
+                      <i className="fab fa-facebook fa-2x me-2"></i>
+                      <span>facebook</span>
+                    </a>
+
+                    <a
+                      href="https://www.instagram.com/institutoyofi/"
+                      target="_blank"
+                      className="d-flex align-items-center text-uppercase text-decoration-none"
+                      rel="noopener noreferrer">
+                      <i className="fab fa-instagram fa-2x me-2"></i>
+                      <span>instagram</span>
+                    </a>
+                    <br />
+                  </div>
+                </div> */}
               </div>
             </div>
           </ScrollAnimation>

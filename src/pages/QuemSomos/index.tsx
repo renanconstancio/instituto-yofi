@@ -1,5 +1,7 @@
+import './style.scss';
 import Rodape from '../../components/Rodape';
 import Topo from '../../components/Topo';
+import { Link } from 'react-router-dom';
 
 const QuemSomos = () => {
   return (
@@ -8,9 +10,13 @@ const QuemSomos = () => {
       <div className="bg-white border-top pt-5 pb-5">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-8">
-              <h1 className="fst-italic text-center mb-5">Quem Somos</h1>
-
+            <div className="col-12 col-sm-8 text-quem-somos">
+              <h1 className="button">Quem Somos</h1>
+              <div className="text-end mb-3">
+                <Link to="/" className="fst-italic">
+                  <small>Voltar</small>
+                </Link>
+              </div>
               <p>
                 O Instituto Yofi surgiu da união de dois profissionais altamente capacitados e com
                 uma visão empreendedora de entregar ao seu paciente o melhor do atendimento em
