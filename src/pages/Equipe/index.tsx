@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Helmet } from 'react-helmet';
 import Rodape from '../../components/Rodape';
 import Topo from '../../components/Topo';
@@ -10,9 +11,7 @@ const Equipe = () => {
       <div className="bg-white border-top pt-5 pb-5">
         <div className="container">
           <div className="row justify-content-center">
-            <h1 className="fst-italic text-center mb-5 pb-3 col col-12 border-bottom">
-              Nossa Equipe
-            </h1>
+            <h1 className="fst-italic text-center mb-5 pb-3 col col-12 border-bottom">Nossa Equipe</h1>
             <div className="col col-6 p-3">
               <h3 className="fst-italic mb-3 text-center">Dra. Luciane B. Marrone Guimarães</h3>
               <img src="./equipe/luciane-840.jpg" className="img-fluid img-thumbnail rounded" />

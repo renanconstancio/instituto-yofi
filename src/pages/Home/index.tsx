@@ -8,9 +8,9 @@ import scrollToElement from 'scroll-to-element';
 import Topo from '../../components/Topo';
 import Rodape from '../../components/Rodape';
 import Banner from '../../components/Banner';
-import Contato from '../Contato';
 import Contador from '../../components/Contador';
-import MapPage from '../../components/MapPage';
+import Contato from '../Contato';
+// import MapPage from '../../components/MapPage';
 
 const Home = () => {
   return (
@@ -28,14 +28,14 @@ const Home = () => {
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUpBig" animateOut="fadeInDown">
                 <div>
-                  O Instituto Yofi surgiu da união de dois profissionais altamente capacitados e com
-                  uma visão empreendedora de entregar ao seu paciente o melhor do atendimento em
-                  odontologia. <br />
+                  O Instituto Yofi surgiu da união de dois profissionais altamente capacitados e com uma
+                  visão empreendedora de entregar ao seu paciente o melhor do atendimento em odontologia.{' '}
                   <br />
-                  Dra. Luciane, especialista em ortodontia, e Dr. Rogério, especialista em prótese,
-                  são formados em Odontologia e com suas especializações pela UNESP e possuem
-                  diversos outros cursos de atualização, inclusive fora do país, como o exemplo de
-                  seu curso na Carolina do Norte - EUA.
+                  <br />
+                  Dra. Luciane, especialista em ortodontia, e Dr. Rogério, especialista em prótese, são
+                  formados em Odontologia e com suas especializações pela UNESP e possuem diversos outros
+                  cursos de atualização, inclusive fora do país, como o exemplo de seu curso na Carolina
+                  do Norte - EUA.
                   <Link
                     to="/quem-somos"
                     className="d-block float-end"
@@ -94,14 +94,14 @@ const Home = () => {
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUpBig" animateOut="fadeInDown">
                 <div>
-                  O Instituto Yofi surgiu da união de dois profissionais altamente capacitados e com
-                  uma visão empreendedora de entregar ao seu paciente o melhor do atendimento em
-                  odontologia. <br />
+                  O Instituto Yofi surgiu da união de dois profissionais altamente capacitados e com uma
+                  visão empreendedora de entregar ao seu paciente o melhor do atendimento em odontologia.{' '}
                   <br />
-                  Dra. Luciane, especialista em ortodontia, e Dr. Rogério, especialista em prótese,
-                  são formados em Odontologia e com suas especializações pela UNESP e possuem
-                  diversos outros cursos de atualização, inclusive fora do país, como o exemplo de
-                  seu curso na Carolina do Norte - EUA.
+                  <br />
+                  Dra. Luciane, especialista em ortodontia, e Dr. Rogério, especialista em prótese, são
+                  formados em Odontologia e com suas especializações pela UNESP e possuem diversos outros
+                  cursos de atualização, inclusive fora do país, como o exemplo de seu curso na Carolina
+                  do Norte - EUA.
                 </div>
               </ScrollAnimation>
             </div>
@@ -111,9 +111,9 @@ const Home = () => {
 
       <Contato />
 
-      <div className="info">
+      {/* <div className="info">
         <MapPage />
-      </div>
+      </div> */}
 
       <Rodape />
     </>

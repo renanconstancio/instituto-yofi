@@ -15,8 +15,10 @@ const Banner = () => {
         dots={false}
         autoplay={true}
         lazyLoad={true}
-        animateIn="fadeIn"
+        animateIn="fadeInLeft"
+        smartSpeed={770}
         navElement="span"
+        autoplayTimeout={7000}
         navContainer=".custon-nav">
         <div
           className="item"

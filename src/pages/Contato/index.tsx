@@ -3,6 +3,7 @@ import './style.scss';
 import { useRef, useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const initialFormData = {
   nome: '',
@@ -207,12 +208,12 @@ const Contato = () => {
                 </div>
               </div>
               <div className="col-md-7">
-                <h2 className="mb-3 border-bottom pb-3">Informações de Contato</h2>
-                <div className="d-flex align-items-center">
-                  <div className="flex-grow-1 me-3">
-                    <strong className="d-block h3 border-bottom pb-2">
-                      Instituto Yofi - Itápolis
-                    </strong>
+                <h2 className="mb-3 text-center text-sm-start border-bottom pb-3">
+                  Informações de Contato
+                </h2>
+                <div className="d-flex flex-column flex-column-reverse flex-md-row align-items-center">
+                  <div className="flex-grow-1 flex-grow-1 me-3">
+                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Itápolis</strong>
                     <strong className="d-block">
                       <i className="fas fa-phone-alt m-2"></i>
                       (16) 3262-1840
@@ -220,6 +221,7 @@ const Contato = () => {
                     <p className="text-uppercase">
                       AV. FRANCISCO PORTO, 1146 - CENTRO, ITÁPOLIS - SP, 14900-000
                     </p>
+                    <Link to="/como-chegar/itapolis">Como Chegar</Link>
                   </div>
                   <div className="flex-shrink-0">
                     <img
@@ -233,7 +235,7 @@ const Contato = () => {
                   </div>
                 </div>
                 <div className="border-bottom m-3 mx-0" />
-                <div className="d-flex align-items-center">
+                <div className="d-flex flex-column flex-md-row align-items-center">
                   <div className="flex-shrink-0">
                     <img
                       src="yofi-ibitinga.jpg"
@@ -245,9 +247,7 @@ const Contato = () => {
                     />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <strong className="d-block h3 border-bottom pb-2">
-                      Instituto Yofi - Ibitinga
-                    </strong>
+                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Ibitinga</strong>
                     <strong className="d-block">
                       <i className="fas fa-phone-alt me-2"></i>
                       (16) 3342-2810
@@ -255,6 +255,7 @@ const Contato = () => {
                     <p className="text-uppercase">
                       Av. Sete de Setembro, 760 - Centro, Ibitinga - SP, 14940-000
                     </p>
+                    <Link to="/como-chegar/ibitinga">Como Chegar</Link>
                   </div>
                 </div>
 

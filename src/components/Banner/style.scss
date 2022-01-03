@@ -34,6 +34,7 @@
   .owl-item {
     height: 100vh;
     &.active {
+      height: 100vh;
       h1,
       .titles {
         animation: 1s 0.5s fadeInDown both;
@@ -48,7 +49,7 @@
         animation: 1s 0.9s flipInX both;
       }
       .item {
-        height: 100%;
+        height: 100vh;
         background-position: center center;
         background-size: cover;
         display: flex;

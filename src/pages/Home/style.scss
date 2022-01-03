@@ -1,5 +1,9 @@
 .info {
   height: 100vh;
+  @media (max-width: 767px) {
+    height: auto;
+  }
+  
   .form-control {
     background-color: white;
   }
@@ -26,7 +30,7 @@
     font-style: italic;
     font-weight: 700;
     text-decoration: none;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
       font-size: 100%;
     }
   }
@@ -42,7 +46,7 @@
   div {
     font-style: italic;
     font-size: 1.3rem;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
       font-size: 100%;
     }
   }
@@ -86,7 +90,7 @@
   div {
     font-style: italic;
     font-size: 1.3rem;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
       font-size: 100%;
     }
   }

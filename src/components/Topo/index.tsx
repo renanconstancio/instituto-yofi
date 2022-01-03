@@ -167,7 +167,7 @@ const Topo = () => {
                   </span>
                   <span className="flex-fill flip">
                     <HashLink
-                      to="#/nossas_unidades"
+                      to="/#nossas_unidades"
                       onClick={() =>
                         scrollToElement('#nossas_unidades', {
                           offset: 0,
@@ -206,7 +206,7 @@ const Topo = () => {
                   </span>
                   <span className="flex-fill flip">
                     <HashLink
-                      to="#contato"
+                      to="/#contato"
                       onClick={() =>
                         scrollToElement('#contato', {
                           offset: 0,
