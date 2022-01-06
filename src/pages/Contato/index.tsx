@@ -211,18 +211,7 @@ const Contato = () => {
                 <h2 className="mb-3 text-center text-sm-start border-bottom pb-3">
                   Informações de Contato
                 </h2>
-                <div className="d-flex flex-column flex-column-reverse flex-md-row align-items-center">
-                  <div className="flex-grow-1 flex-grow-1 me-3">
-                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Itápolis</strong>
-                    <strong className="d-block">
-                      <i className="fas fa-phone-alt m-2"></i>
-                      (16) 3262-1840
-                    </strong>
-                    <p className="text-uppercase">
-                      AV. FRANCISCO PORTO, 1146 - CENTRO, ITÁPOLIS - SP, 14900-000
-                    </p>
-                    <Link to="/como-chegar/itapolis">Como Chegar</Link>
-                  </div>
+                <div className="d-flex flex-column flex-md-row align-items-center">
                   <div className="flex-shrink-0">
                     <img
                       src="yofi-itapolis.jpg"
@@ -232,6 +221,19 @@ const Contato = () => {
                         width: '255px'
                       }}
                     />
+                  </div>
+                  <div className="flex-grow-1 flex-grow-1 ms-3">
+                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Itápolis</strong>
+                    <strong className="d-block">
+                      <i className="fas fa-phone-alt m-2"></i>
+                      (16) 3262-1840
+                    </strong>
+                    <p className="text-uppercase">
+                      AV. FRANCISCO PORTO, 1146 - CENTRO, ITÁPOLIS - SP, 14900-000
+                    </p>
+                    <Link to="/como-chegar/itapolis" className="float-end">
+                      Como Chegar
+                    </Link>
                   </div>
                 </div>
                 <div className="border-bottom m-3 mx-0" />
@@ -255,7 +257,9 @@ const Contato = () => {
                     <p className="text-uppercase">
                       Av. Sete de Setembro, 760 - Centro, Ibitinga - SP, 14940-000
                     </p>
-                    <Link to="/como-chegar/ibitinga">Como Chegar</Link>
+                    <Link to="/como-chegar/ibitinga" className="float-end">
+                      Como Chegar
+                    </Link>
                   </div>
                 </div>
 
