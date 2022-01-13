@@ -223,7 +223,9 @@ const Contato = () => {
                     />
                   </div>
                   <div className="flex-grow-1 flex-grow-1 ms-3">
-                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Itápolis</strong>
+                    <strong className="d-block h5 px-3 py-1 bg-primary text-white text-uppercase">
+                      Instituto Yofi - Itápolis
+                    </strong>
                     <strong className="d-block">
                       <i className="fas fa-phone-alt m-2"></i>
                       (16) 3262-1840
@@ -249,7 +251,9 @@ const Contato = () => {
                     />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <strong className="d-block h3 border-bottom pb-2">Instituto Yofi - Ibitinga</strong>
+                    <strong className="d-block h5 px-3 py-1 bg-primary text-white text-uppercase">
+                      Instituto Yofi - Ibitinga
+                    </strong>
                     <strong className="d-block">
                       <i className="fas fa-phone-alt me-2"></i>
                       (16) 3342-2810
