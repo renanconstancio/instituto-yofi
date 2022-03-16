@@ -33,28 +33,44 @@
 
   .owl-item {
     height: 100vh;
+    color: #272727;
     &.active {
       height: 100vh;
-      h1,
-      .titles {
-        animation: 1s 0.5s fadeInDown both;
-        text-transform: uppercase;
-        margin-left: 5em;
-      }
-      .descriptions {
-        animation: 1s 0.6s fadeInUp both;
-        margin-left: 6em;
-      }
-      .btns {
-        animation: 1s 0.9s flipInX both;
-      }
       .item {
-        height: 100vh;
+        height: 100%;
         background-position: center center;
         background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        h1,
+        .titles {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 3.5em;
+          margin-left: 3em;
+          animation: 1s 0.5s fadeInDown both;
+          @media (max-width: 767px) {
+            font-size: 2em;
+            margin-left: 0;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .descriptions {
+          margin-left: 7em;
+          font-size: 1.5em;
+          animation: 1s 0.6s fadeInUp both;
+          @media (max-width: 767px) {
+            font-size: 1.2em;
+            margin-left: 0.5em;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .btns {
+          animation: 1s 0.9s flipInX both;
+        }
       }
     }
   }

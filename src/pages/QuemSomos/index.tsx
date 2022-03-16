@@ -13,7 +13,7 @@ const QuemSomos = () => {
             <div className="col-12 col-sm-8 text-quem-somos">
               <h1 className="button">Quem Somos</h1>
               <div className="text-end mb-3">
-                <Link to="/" className="fst-italic">
+                <Link to="/#quem_somos" className="fst-italic">
                   <small>Voltar</small>
                 </Link>
               </div>
@@ -67,6 +67,11 @@ const QuemSomos = () => {
                 <i>Tecnologia;</i>
                 <br />
                 <i>Sustentabilidade.</i>
+              </div>
+              <div className="text-end mb-3">
+                <Link to="/#quem_somos" className="fst-italic">
+                  <small>Voltar</small>
+                </Link>
               </div>
             </div>
           </div>

@@ -10,7 +10,6 @@ import Rodape from '../../components/Rodape';
 import Banner from '../../components/Banner';
 import Contador from '../../components/Contador';
 import Contato from '../Contato';
-// import MapPage from '../../components/MapPage';
 
 const Home = () => {
   return (
@@ -102,6 +101,11 @@ const Home = () => {
                   formados em Odontologia e com suas especializações pela UNESP e possuem diversos outros
                   cursos de atualização, inclusive fora do país, como o exemplo de seu curso na Carolina
                   do Norte - EUA.
+                  <br />
+                  <br />
+                  Hoje o Instituto Yofi conta com 2 Unidades de atendimento sendo uma em Itápolis e a
+                  <br />
+                  outra em Ibitinga, clique no botão abaixo e confira um pouco sobre nossas clínicas.
                 </div>
               </ScrollAnimation>
             </div>

@@ -16,9 +16,9 @@ const Banner = () => {
         autoplay={true}
         lazyLoad={true}
         animateIn="fadeInLeft"
-        smartSpeed={770}
+        smartSpeed={660}
         navElement="span"
-        autoplayTimeout={7000}
+        autoplayTimeout={7500}
         navContainer=".custon-nav">
         <div
           className="item"
@@ -26,10 +26,10 @@ const Banner = () => {
             backgroundColor: '#fff',
             backgroundImage: 'url("banners/banner-01.jpg")'
           }}>
-          <h1>banner a</h1>
+          <h1>EQUIPE ESPECIALIZADA</h1>
           <div className="descriptions">
-            Texto demonstrativo do banner <br />
-            Banner A
+            Todos os profissionais altamente qualificados e<br />
+            atualizadas com tudo o que existe de mais novo no mercado.
           </div>
         </div>
         <div
@@ -38,10 +38,13 @@ const Banner = () => {
             backgroundColor: '#fff',
             backgroundImage: 'url("banners/banner-02.jpg")'
           }}>
-          <h1>banner b</h1>
+          <h1>CLÍNICAS EQUIPADAS</h1>
           <div className="descriptions">
-            Texto demonstrativo do banner <br />
-            Banner B
+            Todas as salas do Instituto Yofi possuem
+            <br />
+            equipamentos de última geração proporcionando
+            <br />
+            resultados fantásticos
           </div>
         </div>
       </OwlCarousel>

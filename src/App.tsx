@@ -15,6 +15,7 @@ function App() {
 
         <Route path="/quem-somos" element={<QuemSomos />} />
         <Route path="/nossa-equipe" element={<Equipe />} />
+        <Route path="/nossas-unidades" element={<Equipe />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/como-chegar/itapolis" element={<Itapolis />} />
         <Route path="/como-chegar/ibitinga" element={<Ibitinga />} />
