@@ -1,5 +1,6 @@
-.equipe {
-  h1 {
+.galeria {
+  h1,
+  h3 {
     color: #446a49;
     font-weight: bold;
   }
@@ -13,7 +14,8 @@
   .img {
     position: relative;
     overflow: hidden;
-    border: solid 16px #fff;
+    border: solid 15px #fff;
+    height: 275px;
     @media (max-width: 767px) {
       height: 375px;
     }

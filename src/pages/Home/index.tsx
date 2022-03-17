@@ -107,6 +107,17 @@ const Home = () => {
                   <br />
                   outra em Ibitinga, clique no botão abaixo e confira um pouco sobre nossas clínicas.
                 </div>
+                <Link
+                  to="/galeria"
+                  className="d-block float-end"
+                  onClick={() =>
+                    scrollToElement('#root', {
+                      offset: 0,
+                      duration: 1500
+                    })
+                  }>
+                  Saiba mais
+                </Link>
               </ScrollAnimation>
             </div>
           </div>
